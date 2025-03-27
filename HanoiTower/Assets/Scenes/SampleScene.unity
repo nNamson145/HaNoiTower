@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -247,6 +247,7 @@ MonoBehaviour:
   originalPos: {x: 0, y: 0, z: 0}
   mouseOffset: {x: 0, y: 0, z: 0}
   originalPeg: {fileID: 0}
+  newPeg: {fileID: 0}
 --- !u!54 &64540534
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -653,6 +654,7 @@ MonoBehaviour:
   originalPos: {x: 0, y: 0, z: 0}
   mouseOffset: {x: 0, y: 0, z: 0}
   originalPeg: {fileID: 0}
+  newPeg: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,13 +834,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19727653, y: -0.6790302, z: 0.19727653, w: 0.6790302}
-  m_LocalPosition: {x: 20, y: 15, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 20, y: 3.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 32.4, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1126428773
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +965,7 @@ MonoBehaviour:
   originalPos: {x: 0, y: 0, z: 0}
   mouseOffset: {x: 0, y: 0, z: 0}
   originalPeg: {fileID: 0}
+  newPeg: {fileID: 0}
 --- !u!54 &1126428780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1114,6 +1117,7 @@ MonoBehaviour:
   originalPos: {x: 0, y: 0, z: 0}
   mouseOffset: {x: 0, y: 0, z: 0}
   originalPeg: {fileID: 0}
+  newPeg: {fileID: 0}
 --- !u!54 &1272693628
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1265,6 +1269,7 @@ MonoBehaviour:
   originalPos: {x: 0, y: 0, z: 0}
   mouseOffset: {x: 0, y: 0, z: 0}
   originalPeg: {fileID: 0}
+  newPeg: {fileID: 0}
 --- !u!54 &1366751181
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1643,6 +1648,7 @@ MonoBehaviour:
   originalPos: {x: 0, y: 0, z: 0}
   mouseOffset: {x: 0, y: 0, z: 0}
   originalPeg: {fileID: 0}
+  newPeg: {fileID: 0}
 --- !u!54 &1702283273
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1922,6 +1928,7 @@ MonoBehaviour:
   originalPos: {x: 0, y: 0, z: 0}
   mouseOffset: {x: 0, y: 0, z: 0}
   originalPeg: {fileID: 0}
+  newPeg: {fileID: 0}
 --- !u!54 &2144448082
 Rigidbody:
   m_ObjectHideFlags: 0
