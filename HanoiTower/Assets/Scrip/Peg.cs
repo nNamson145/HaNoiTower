@@ -18,28 +18,27 @@ public class Peg : MonoBehaviour
                 diskList.Add(child.gameObject);
             }
         }
-
-        Debug.LogWarning($"[Peg {gameObject.name}] NumStart : {diskList.Count}");
     }
 
     public bool CanPlaceDisk(GameObject disk)
     {
+        if (disk == null) return false;  
         if (diskList.Count == 0) return true;
 
-        return disk.transform.localScale.x < diskList[diskList.Count - 1].transform.localScale.x;
+        GameObject topDisk = diskList[diskList.Count - 1];
+        return disk.transform.localScale.x < topDisk.transform.localScale.x;
     }
 
     public void PlaceDisk(GameObject disk)
     {
         diskList.Add(disk);
-        float diskHeight = disk.transform.localScale.y;
-        float newY = transform.position.y + (diskList.Count - 1) * diskHeight*10;
+        float newY = transform.position.y + (diskList.Count - 1);
+        Debug.Log(newY);
 
         disk.transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         //disk.transform.SetParent(transform);
 
-        Debug.Log($"[Peg {gameObject.name}] Đĩa đặt vào: {disk.name}. Tổng đĩa: {diskList.Count}");
-
+        Debug.LogWarning(gameObject.name + " : "+ diskList.Count);
     }
 
 
