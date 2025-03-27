@@ -76,4 +76,5 @@ crashlytics-build.properties
 # Unity build and temporary files
 Library/
 Logs/
+obj/
 Temp/
