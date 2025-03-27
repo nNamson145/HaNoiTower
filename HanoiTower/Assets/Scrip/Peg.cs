@@ -33,7 +33,7 @@ public class Peg : MonoBehaviour
     {
         diskList.Add(disk);
         float diskHeight = disk.transform.localScale.y;
-        float newY = transform.position.y + (diskList.Count - 1) * diskHeight*2;
+        float newY = transform.position.y + (diskList.Count - 1) * diskHeight*10;
 
         disk.transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         //disk.transform.SetParent(transform);
@@ -41,6 +41,7 @@ public class Peg : MonoBehaviour
         Debug.Log($"[Peg {gameObject.name}] Đĩa đặt vào: {disk.name}. Tổng đĩa: {diskList.Count}");
 
     }
+
 
     public void RemoveTopDisk()
     {
