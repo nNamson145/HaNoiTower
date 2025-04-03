@@ -34,7 +34,7 @@ public class Disk : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        transform.position = GetMouseWorldPos();
+        transform.position = new Vector3(0.0f ,GetMouseWorldPos().y ,GetMouseWorldPos().z);
     }
 
     void OnMouseUp()
@@ -52,7 +52,6 @@ public class Disk : MonoBehaviour
                     {
                         originalPeg.RemoveTopDisk();
                     }
-                    Debug.LogError("loi me roi");
                     newPeg.PlaceDisk(gameObject);
                     transform.SetParent(newPeg.transform);
                     return;

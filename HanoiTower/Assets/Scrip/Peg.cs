@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class Peg : MonoBehaviour
 {
+    public bool pegtarget;
+
     public List<GameObject> diskList;
+
+    private int totalDisk;
 
     private void Start()
     {
@@ -18,6 +22,9 @@ public class Peg : MonoBehaviour
                 diskList.Add(child.gameObject);
             }
         }
+
+        totalDisk = FindObjectsOfType<Disk>().Length;
+
     }
 
     public bool CanPlaceDisk(GameObject disk)
@@ -31,14 +38,19 @@ public class Peg : MonoBehaviour
 
     public void PlaceDisk(GameObject disk)
     {
+        
+
         diskList.Add(disk);
         float newY = transform.position.y + (diskList.Count - 1);
-        Debug.Log(newY);
-
+        
         disk.transform.position = new Vector3(transform.position.x, newY, transform.position.z);
-        //disk.transform.SetParent(transform);
-
-        Debug.LogWarning(gameObject.name + " : "+ diskList.Count);
+        disk.transform.SetParent(transform);
+        if (disk != null)
+        {
+            disk.GetComponent<Disk>().originalPos = disk.transform.position;
+        }
+        CheckPegTargetIsFull();
+        //Debug.LogWarning(gameObject.name + " : "+ diskList.Count);
     }
 
 
@@ -48,5 +60,15 @@ public class Peg : MonoBehaviour
         {
             diskList.RemoveAt(diskList.Count - 1);
         }
+    }
+
+    public bool CheckPegTargetIsFull()
+    {
+        if(diskList.Count == totalDisk)
+        {
+            Debug.Log("WIN GAME");
+            return true;
+        }
+        return false;
     }
 }
